@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfApp3_Bindings.Ex1Binding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3_Bindings"
+        mc:Ignorable="d"
+        Title="Ex1Binding" Height="450" Width="800">
+    <StackPanel>
+        <Slider IsSnapToTickEnabled="True" x:Name="slider1" Height="45" Margin="0,0,0.333,0" Minimum="0" Maximum="100" />
+        <TextBox x:Name="TXT1" Height="55" Text="{ Binding ElementName=slider1,Path=Value,Mode=OneTime,UpdateSourceTrigger=PropertyChanged}" Margin="175,0,268.333,0"/>
+        <Slider IsSnapToTickEnabled="True" x:Name="slider2" Height="45" Margin="0,0,0.333,0" Minimum="0" Maximum="100" />
+        <TextBox x:Name="TXT2" Height="55" Text="{ Binding ElementName=slider2,Path=Value,Mode=OneWayToSource,UpdateSourceTrigger=PropertyChanged}" Margin="175,0,268.333,0"/>
+
+    </StackPanel>
+</Window>
